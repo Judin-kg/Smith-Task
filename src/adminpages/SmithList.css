@@ -1,0 +1,11 @@
+/* ✅ Make table scrollable on small screens */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1rem;
+}
+
+.table-wrapper table {
+  min-width: 700px; /* Prevents columns from squeezing too much */
+}

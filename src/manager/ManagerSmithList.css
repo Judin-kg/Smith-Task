@@ -1,0 +1,12 @@
+/* ✅ Make table scrollable on small screens */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scroll for iOS */
+  margin-bottom: 1rem;
+}
+
+/* Optional: Prevent table from shrinking too much */
+.table-wrapper table {
+  min-width: 600px;
+}
