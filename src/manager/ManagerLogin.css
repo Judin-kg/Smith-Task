@@ -1,0 +1,160 @@
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+  background: #0a0f1f;
+  color: #ffffff;
+}
+
+/* =====================================================
+   BACKGROUND SECTION
+===================================================== */
+.manager-bg {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(5, 8, 20, 0.9), rgba(5, 8, 20, 0.9)),
+    url("https://i.pinimg.com/736x/94/f1/4f/94f14fe690d62b6c5b1c05e172f57a88.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* =====================================================
+   LOGIN CARD (GLASS EFFECT)
+===================================================== */
+.manager-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 42px 38px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+}
+
+/* =====================================================
+   TITLES
+===================================================== */
+.manager-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #efede2;
+  margin-bottom: 6px;
+}
+
+.manager-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #dddddd;
+  margin-bottom: 30px;
+}
+
+/* =====================================================
+   INPUT FIELDS
+===================================================== */
+.glass-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  color: #ffffff;
+  padding: 13px 16px;
+  border-radius: 14px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.glass-input::placeholder {
+  color: #e0e0e0;
+}
+
+.glass-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.28);
+  border-color: #ffd700;
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.6);
+  color: #ffffff;
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+.manager-btn {
+  width: 100%;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #00ff99, #00ccff);
+  border: none;
+  padding: 14px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.manager-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(68, 163, 189, 0.65);
+}
+
+/* =====================================================
+   ALERT MESSAGE
+===================================================== */
+.alert {
+  background: rgba(255, 0, 0, 0.18);
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+@media (max-width: 768px) {
+  .manager-card {
+    padding: 34px 28px;
+  }
+
+  .manager-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .manager-card {
+    padding: 26px 22px;
+  }
+
+  .manager-title {
+    font-size: 22px;
+  }
+
+  .manager-subtitle {
+    font-size: 13px;
+  }
+
+  .manager-btn {
+    font-size: 15px;
+    padding: 13px;
+  }
+}

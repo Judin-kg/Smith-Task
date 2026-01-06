@@ -1,134 +1,169 @@
+/* =====================================================
+   ROOT VARIABLES
+===================================================== */
 :root {
-  --bg: #ffffff;
-  --card-bg: #ffffff;
-  --text: #0f172a;
-  --muted: #475569;
-  --brand: #0ea5e9;
-  --brand-strong: #0284c7;
-  --ring: rgba(14, 165, 233, 0.25);
-  --border: #e2e8f0;
-  --shadow: 0 10px 20px rgba(2, 8, 23, 0.06);
+  --gold: #ffd700;
+  --gold-dark: #c9a227;
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 215, 0, 0.35);
+  --text-white: #ffffff;
+  --muted: rgba(255, 255, 255, 0.75);
 }
 
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-.products {
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: #060a18;
+  color: var(--text-white);
+}
+
+/* =====================================================
+   MAIN BACKGROUND
+===================================================== */
+/* .container-fluid {
   min-height: 100vh;
-  background: var(--bg);
-  padding: 2rem 1rem 3rem;
-  color: var(--text);
+  background:
+    linear-gradient(rgba(5, 8, 20, 0.92), rgba(5, 8, 20, 0.92)),
+    url("https://www.shutterstock.com/image-photo/wedding-rings-on-black-backgrounds-260nw-381275146.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 3rem;
+} */
+
+/* =====================================================
+   CATEGORY BUTTONS
+===================================================== */
+.category-buttons {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-.products__header {
-  max-width: 1100px;
-  margin: 0 auto 1.25rem;
-  padding: 0 0.25rem;
+.category-buttons .btn {
+  border-radius: 50px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  font-weight: 600;
 }
 
-.products__header h2 {
-  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
-  margin: 0;
-  letter-spacing: -0.01em;
+.category-buttons .btn-secondary {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #1a1a1a;
+  border: none;
 }
 
-.products__sub {
-  margin: 0.25rem 0 0;
-  color: var(--muted);
-  font-size: 0.95rem;
+/* =====================================================
+   SIDEBAR (SUBCATEGORY)
+===================================================== */
+.card.h-100.p-3 {
+
+  background: var(--glass-bg);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 18px;
+  border: 1px solid var(--glass-border);
+  color: var(--text-white);
+  
 }
 
+.list-group-item {
+  background: transparent;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: var(--text-white);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 6px;
+  border-radius: 10px;
+}
+
+.list-group-item:hover {
+  background: rgba(255, 215, 0, 0.15);
+}
+
+.list-group-item.active {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #1a1a1a;
+  border-color: var(--gold);
+}
+
+.list-group-item .badge {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* =====================================================
+   PRODUCT GRID
+===================================================== */
 .products__grid {
   list-style: none;
-  margin: 0 auto;
+  
   padding: 0;
-  max-width: 1100px;
-
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
+/* =====================================================
+   PRODUCT CARD (GLASS)
+===================================================== */
 .product-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  box-shadow: var(--shadow);
-  padding: 0.85rem;
-  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  padding: 1rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .product-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 28px rgba(2, 8, 23, 0.09);
-  border-color: #dbe3ee;
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(255, 215, 0, 0.35);
 }
 
-.product-card__btn {
-  width: 100%;
-  appearance: none;
-  border: 0;
-  border-radius: 0.75rem;
-  padding: 0.7rem 1rem;
-  background: linear-gradient(180deg, var(--brand), var(--brand-strong));
-  color: white;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  transition: filter 140ms ease, transform 80ms ease, box-shadow 140ms ease;
-  box-shadow: 0 6px 14px rgba(2, 132, 199, 0.35);
-}
-
-.product-card__btn:hover {
-  filter: brightness(1.05);
-}
-
-.product-card__btn:active {
-  transform: translateY(1px);
-}
-
-.product-card__btn:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 4px var(--ring);
-}
-
-.product-card__details {
-  display: grid;
-  gap: 0.75rem;
-  margin-top: 0.9rem;
-}
-
+/* =====================================================
+   PRODUCT IMAGE
+===================================================== */
 .product-card__image {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 0.75rem;
-  border: 1px solid var(--border);
-  background: #f1f5f9;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
 }
 
-.product-card__meta {
-  display: grid;
-  gap: 0.25rem;
+/* =====================================================
+   PRODUCT DETAILS
+===================================================== */
+.product-card__details {
+  margin-top: 12px;
 }
 
 .product-card__name {
-  margin: 0;
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.01em;
+  margin-bottom: 6px;
+  color: var(--text-white);
 }
 
 .product-card__row {
+  font-size: 0.9rem;
   display: flex;
-  align-items: baseline;
-  gap: 0.35rem;
-  margin: 0.1rem 0 0;
-  font-size: 0.93rem;
+  gap: 6px;
 }
 
 .product-card__row .label {
@@ -136,97 +171,90 @@
 }
 
 .product-card__row .value {
-  color: var(--text);
+  color: var(--text-white);
   font-weight: 600;
 }
 
-/* Responsive polish */
-@media (min-width: 768px) {
-  .products {
-    padding: 2.5rem 2rem 4rem;
+/* =====================================================
+   BUTTONS
+===================================================== */
+.product-card .btn-primary {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  border: none;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.product-card .btn-outline-primary {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.product-card .btn-outline-primary:hover {
+  background: var(--gold);
+  color: #1a1a1a;
+}
+
+/* =====================================================
+   INPUT (QTY)
+===================================================== */
+.form-control {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--glass-border);
+  color: var(--text-white);
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.45);
+  color: var(--text-white);
+}
+
+/* =====================================================
+   STATS & GRAPH CARDS
+===================================================== */
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 18px;
+  border: 1px solid var(--glass-border);
+  color: var(--text-white);
+}
+
+.card h5 {
+  color: var(--gold);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 992px) {
+  .products__grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    
   }
+}
+
+@media (max-width: 768px) {
+  .products__grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+ 
   .product-card {
-    padding: 1rem; /* fixed invisible space issue */
+    padding: 0.75rem;
   }
-}
-
 .category-buttons {
-  display: flex;
-  gap: 10px;
-  margin: 15px 0;
-  flex-wrap: wrap;
-}
-
-.category-btn {
-  padding: 8px 16px;
-  border: 1px solid #444;
-  background: #fff;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-.category-btn:hover {
-  background: #f0c14b;
-  border-color: #a88734;
-}
-
-.category-btn.active {
-  background: #333;
-  color: #fff;
-  border-color: #333;
-}
-/* Sidebar */
-.sidebar {
-  width: 220px;
-  background: #f8f9fa;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 80px;
-  height: fit-content;
-}
-
-.sidebar h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #333;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.5rem;
-}
-
-/* Subcategory list */
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.subcat-item {
-  padding: 0.6rem 0.8rem;
-  margin-bottom: 0.5rem;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  color: #444;
-  transition: all 0.3s ease;
-}
-
-.subcat-item:hover {
-  background: #e9ecef;
-  color: #000;
-  transform: translateX(4px);
-}
-
-.subcat-item.active {
-  background: #007bff;
-  color: white;
-  font-weight: 600;
-}
- .sidebar {
-    width: 100%;
-    position: relative;
+    justify-content: center;
+    margin-top: 10px;
   }
+ 
+  
+  .product-card__name {
+    font-size: 0.95rem;
+  }
+}

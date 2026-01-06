@@ -1,0 +1,158 @@
+/* =========================================
+   RESET
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+  background: #0b0f1a;
+  color: #ffffff;
+}
+
+/* =========================================
+   BACKGROUND
+========================================= */
+.admin-bg {
+  min-height: 100vh;
+  background:
+    /* linear-gradient(rgba(10, 12, 25, 0.9), rgba(11, 13, 28, 0.9)), */
+    url("https://media.licdn.com/dms/image/v2/D4D12AQFqfYwKri1tWA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1693378394152?e=2147483647&v=beta&t=RYUmpFjN6ZXCy_2-DqmBLy4KE6BEPYc-WRnNZR92Svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* =========================================
+   CARD (GLASS EFFECT)
+========================================= */
+.admin-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 42px 38px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+}
+
+/* =========================================
+   TEXT
+========================================= */
+.admin-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #d9d6c5;
+  margin-bottom: 6px;
+}
+
+.admin-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #dddddd;
+  margin-bottom: 28px;
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+.admin-input {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  color: #ffffff;
+  padding: 13px 16px;
+  border-radius: 14px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.admin-input::placeholder {
+  color: #e0e0e0;
+}
+
+.admin-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.28);
+  border-color: #ffd700;
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.6);
+  color: #ffffff;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+.admin-btn {
+  margin-top: 10px;
+  background: linear-gradient(135deg, #00ff99, #00ccff);
+  border: none;
+  padding: 14px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(111, 175, 202, 0.65);
+}
+
+/* =========================================
+   ALERT
+========================================= */
+.admin-alert {
+  background: rgba(255, 0, 0, 0.2);
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 768px) {
+  .admin-card {
+    padding: 34px 28px;
+  }
+
+  .admin-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-card {
+    padding: 26px 22px;
+  }
+
+  .admin-title {
+    font-size: 22px;
+  }
+
+  .admin-subtitle {
+    font-size: 13px;
+  }
+
+  .admin-btn {
+    font-size: 15px;
+    padding: 13px;
+  }
+}

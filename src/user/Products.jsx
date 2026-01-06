@@ -449,6 +449,7 @@ console.log(categories,"categorieeeeeeeees");
               <p>No SubCategories</p>
             )}
           </div> */}
+         
           <div className="card h-100 p-3">
   <h4 className="mb-3">SubCategories</h4>
   {subcategories.length > 0 ? (
@@ -484,6 +485,7 @@ console.log(categories,"categorieeeeeeeees");
     <p>No SubCategories</p>
   )}
 </div>
+
 
         </div>
        
@@ -580,7 +582,7 @@ console.log(categories,"categorieeeeeeeees");
           </ul>
 
 
-             <div className="row g-3 mb-4 pt-4">
+             {/* <div className="row g-3 mb-4 pt-4">
             <div className="col-md-6">
               <div className="card h-100 text-center">
                 <div className="card-body">
@@ -598,8 +600,8 @@ console.log(categories,"categorieeeeeeeees");
                 </div>
               </div>
             </div>
-          </div>
-                <div className="card mb-4">
+          </div> */}
+                {/* <div className="card mb-4">
             <div className="card-body">
               <h5>User & Order Growth</h5>
               <Plot
@@ -632,7 +634,7 @@ console.log(categories,"categorieeeeeeeees");
                 style={{ width: "100%" }}
               />
             </div>
-          </div>
+          </div> */}
 
         </div>
         </div>
