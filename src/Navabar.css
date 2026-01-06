@@ -1,0 +1,122 @@
+/* =====================================================
+   GLASS NAVBAR
+===================================================== */
+.glass-navbar {
+  background: rgba(5, 8, 20, 0.65) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.35);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
+  transition: all 0.4s ease;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* =====================================================
+   BRAND LOGO
+===================================================== */
+.navbar-brand img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.7));
+}
+
+/* =====================================================
+   NAV LINKS
+===================================================== */
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-left: 18px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Gold underline animation */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(135deg, #ffd700, #c9a227);
+  left: 0;
+  bottom: -6px;
+  transition: width 0.35s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffd700 !important;
+}
+
+/* =====================================================
+   CART BADGE ANIMATION
+===================================================== */
+.navbar .badge {
+  font-size: 0.7rem;
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =====================================================
+   TOGGLER (MOBILE)
+===================================================== */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.7));
+}
+
+/* =====================================================
+   DROPDOWN COLLAPSE (MOBILE)
+===================================================== */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(5, 8, 20, 0.9);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 18px;
+    padding: 16px;
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+/* =====================================================
+   SCROLL EFFECT (OPTIONAL)
+===================================================== */
+.glass-navbar.scrolled {
+  background: rgba(5, 8, 20, 0.9) !important;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.8);
+}
