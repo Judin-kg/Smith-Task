@@ -114,7 +114,7 @@ const SignUp = () => {
 
     try {
       const res = await axios.post(
-        "https://smith-server-qpxw.vercel.app/api/auth/signup",
+        "https://smithtask-server.vercel.app/api/auth/signup",
         formData
       );
 

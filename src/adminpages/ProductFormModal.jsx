@@ -360,7 +360,7 @@ const ProductFormModal = ({ show, onClose, onSave, categories, smiths, subcatego
   // ✅ Fetch Categories
   const fetchCategories = async () => {
     try {
-      const res = await axios.get("https://smith-server-qpxw.vercel.app/api/categories");
+      const res = await axios.get("https://smithtask-server.vercel.app/api/categories");
       setSelectedCategory(res.data.data);
       console.log(res.data.data, " categories fetched");
     } catch (err) {
@@ -371,7 +371,7 @@ const ProductFormModal = ({ show, onClose, onSave, categories, smiths, subcatego
   // ✅ Fetch SubCategories
   const fetchSubCategories = async () => {
     try {
-      const res = await axios.get("https://smith-server-qpxw.vercel.app/api/subcategories");
+      const res = await axios.get("https://smithtask-server.vercel.app/api/subcategories");
       setSelectedSubcategories(res.data);
       console.log(res.data, " subcategories fetched");
     } catch (err) {
@@ -382,7 +382,7 @@ const ProductFormModal = ({ show, onClose, onSave, categories, smiths, subcatego
   // ✅ Fetch Smiths
   const fetchSmiths = async () => {
     try {
-      const res = await axios.get("https://smith-server-qpxw.vercel.app/api/smiths");
+      const res = await axios.get("https://smithtask-server.vercel.app/api/smiths");
       setSelectedSmiths(res.data.data);
     } catch (err) {
       console.error("Error fetching smiths:", err);
@@ -425,7 +425,7 @@ const ProductFormModal = ({ show, onClose, onSave, categories, smiths, subcatego
         image: imageUrl, // ✅ Cloudinary URL
       };
 
-      const res = await axios.post("https://smith-server-qpxw.vercel.app/api/products", productData);
+      const res = await axios.post("https://smithtask-server.vercel.app/api/products", productData);
 
       if (res.data.success) {
         alert("✅ Product saved!");

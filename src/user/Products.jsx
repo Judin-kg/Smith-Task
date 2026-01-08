@@ -244,9 +244,9 @@ export default function Products() {
   const [orderGraph, setOrderGraph] = useState([]);
 
   useEffect(() => {
-    axios.get("https://smith-server-qpxw.vercel.app/api/dashboard/stats").then((res) => setStats(res.data.data));
-    axios.get("https://smith-server-qpxw.vercel.app/api/dashboard/user-graph").then((res) => setUserGraph(res.data));
-    axios.get("https://smith-server-qpxw.vercel.app/api/dashboard/order-graph").then((res) => setOrderGraph(res.data));
+    axios.get("https://smithtask-server.vercel.app/api/dashboard/stats").then((res) => setStats(res.data.data));
+    axios.get("https://smithtask-server.vercel.app/api/dashboard/user-graph").then((res) => setUserGraph(res.data));
+    axios.get("https://smithtask-server.vercel.app/api/dashboard/order-graph").then((res) => setOrderGraph(res.data));
   }, []);
 
   const formatData = (data) =>
@@ -266,7 +266,7 @@ export default function Products() {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("https://smith-server-qpxw.vercel.app/api/products");
+      const res = await axios.get("https://smithtask-server.vercel.app/api/products");
       setProducts(res.data.data);
 
       const uniqueCategories = ["All", ...new Set(res.data.data.map((item) => item.category))];
@@ -327,7 +327,7 @@ console.log(products,"prooooooooduct");
   };
 
   try {
-    const res = await axios.post("https://smith-server-qpxw.vercel.app/api/orders", orderData);
+    const res = await axios.post("https://smithtask-server.vercel.app/api/orders", orderData);
     alert(`✅ Order placed successfully! Order ID: ${res.data.order._id}`);
   } catch (err) {
     if (err.response) {
@@ -399,7 +399,7 @@ console.log(products,"prooooooooduct");
     const qty = qtyInput ? parseInt(qtyInput.value) : 1;
 
     try {
-      const res = await axios.post("https://smith-server-qpxw.vercel.app/api/cart", {
+      const res = await axios.post("https://smithtask-server.vercel.app/api/cart", {
         userId: user.id,
         username: user.username,
         email: user.email,

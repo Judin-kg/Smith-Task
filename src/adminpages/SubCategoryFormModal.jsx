@@ -17,7 +17,7 @@ const SubCategoryFormModal = ({ show, onClose, onSave }) => {
 //   };
 const onSubmit = async (data) => {
   try {
-    const res = await fetch("https://smith-server-qpxw.vercel.app/api/subcategories", {
+    const res = await fetch("https://smithtask-server.vercel.app/api/subcategories", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

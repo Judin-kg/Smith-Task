@@ -106,7 +106,7 @@ const AdminLogin = () => {
 
     try {
       const res = await axios.post(
-        "https://smith-server-qpxw.vercel.app/api/auth/admin-login",
+        "https://smithtask-server.vercel.app/api/auth/admin-login",
         formData
       );
 

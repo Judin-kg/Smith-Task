@@ -147,7 +147,7 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ms-auto align-items-lg-center">
 
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link className="nav-link" to="/manager-login">
               Manager
             </Link>
@@ -157,7 +157,7 @@ const Navbar = () => {
             <Link className="nav-link" to="/admin-login">
               Admin
             </Link>
-          </li>
+          </li> */}
 
           {/* 🛒 CART */}
           {user && (
