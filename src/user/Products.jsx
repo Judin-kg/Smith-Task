@@ -497,6 +497,7 @@ console.log(categories,"categorieeeeeeeees");
          {/* Plotly Charts */}
 
          {/* Category Buttons */}
+         
           <div className="category-buttons mb-3">
             {categories.map((cat, index) => (
               <button
@@ -548,6 +549,10 @@ console.log(categories,"categorieeeeeeeees");
 
                     <div className="product-card__meta">
                       <h3 className="product-card__name">{item.subCategory}</h3>
+                      <p className="product-card__row">
+                        <span className="label">Product Name:</span>
+                        <span className="value">{item.productName}</span>
+                      </p>
                       <p className="product-card__row">
                         <span className="label">Category:</span>
                         <span className="value">{item.category}</span>

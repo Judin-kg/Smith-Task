@@ -1,22 +1,55 @@
 .ads-banner {
   width: 100%;
-  height: 320px; /* You can adjust height for landscape ratio */
+  height: 470px; /* Desktop default */
   overflow: hidden;
   position: relative;
+  display: flex;
   align-items: center;
-  
-  /* margin-left: ; */
 }
 
-
-
 .ads-image {
-  border-radius: 10px;
-  
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
-   /* Ensures full fill like a banner */
-  transition: opacity 1s ease-in-out;
+  border-radius: 15px;
+  transition: opacity 1s ease-in-out;
+}
+
+/* =======================
+   Tablet (≤ 1024px)
+======================= */
+@media (max-width: 1024px) {
+  .ads-banner {
+    height: 350px;
+  }
+
+  .ads-image {
+    border-radius: 12px;
+  }
+}
+
+/* =======================
+   Mobile (≤ 768px)
+======================= */
+@media (max-width: 768px) {
+  .ads-banner {
+    height: 220px;
+  }
+
+  .ads-image {
+    border-radius: 10px;
+  }
+}
+
+/* =======================
+   Small Mobile (≤ 480px)
+======================= */
+@media (max-width: 480px) {
+  .ads-banner {
+    height: 180px;
+  }
+
+  .ads-image {
+    border-radius: 8px;
+  }
 }

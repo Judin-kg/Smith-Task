@@ -417,6 +417,7 @@ const ProductFormModal = ({ show, onClose, onSave, categories, smiths, subcatego
 
       const productData = {
         smithName: data.smithName,
+        productName: data.productName, // ✅ added
         category: data.category,
         subCategory: data.subCategory,
         mc: data.mc,
@@ -458,6 +459,26 @@ const ProductFormModal = ({ show, onClose, onSave, categories, smiths, subcatego
             <form onSubmit={handleSubmit(onSubmit)}>
               
               {/* Smith */}
+              {/* Product Name */}
+<div className="mb-3">
+  <label className="form-label">Product Name</label>
+  <input
+    type="text"
+    className="form-control"
+    placeholder="Enter product name"
+    {...register("productName", {
+      required: "Product Name is required",
+      minLength: {
+        value: 2,
+        message: "Product Name must be at least 2 characters",
+      },
+    })}
+  />
+  {errors.productName && (
+    <small className="text-danger">{errors.productName.message}</small>
+  )}
+</div>
+
               <div className="mb-3">
                 <label className="form-label">Smith Name</label>
                 <select

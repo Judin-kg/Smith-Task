@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../user/Ads.css";
 
 // Import your images from assets
-import ad1 from "../assets/ChatGPT Image Sep 1, 2025, 10_17_38 AM.png";
-import ad2 from "../assets/ChatGPT Image Sep 1, 2025, 10_11_01 AM.png";
+import ad1 from "../assets/add.png";
+import ad2 from "../assets/home.png";
 const Ads = () => {
   const images = [ad1, ad2]; // Add more if needed
   const [currentIndex, setCurrentIndex] = useState(0);

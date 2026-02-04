@@ -83,7 +83,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import logo from "../src/assets/1000360388-removebg-preview.png";
+import logo from "../src/assets/logo1.png";
 
 const Navbar = () => {
   const [cartCount, setCartCount] = useState(0);
@@ -129,7 +129,7 @@ const Navbar = () => {
         <img
           src={logo}
           alt="Smith Jewellery"
-          style={{ height: "42px" }}
+          style={{ height: "42px"}}
         />
       </Link>
 
