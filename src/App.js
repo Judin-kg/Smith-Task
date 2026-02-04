@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 // import './App.css';
 
 // function App() {
@@ -18,7 +18,7 @@ import Login from './Login';
 import Dashboard from './Dashboard';
 import ChangePassword from './ChangePassword';
 import AdminLogin from './AdminLogin';
-import UserList from './AdminDashboard';
+
 import Navabar from './Navabar';
 import AdminDashboard from './AdminDashboard';
 import ManagerDashboard from './manager/ManagerDashboard';

@@ -227,7 +227,7 @@
 
 import React, { useEffect, useState } from "react";
 import "../user/Product.css";
-import Plot from "react-plotly.js";
+
 import axios from "axios";
 
 
@@ -255,8 +255,8 @@ export default function Products() {
       count: d.count,
     }));
 
-  const userData = formatData(userGraph);
-  const orderData = formatData(orderGraph);
+  // const userData = formatData(userGraph);
+  // const orderData = formatData(orderGraph);
 
   useEffect(() => {
     fetchProducts();
@@ -497,7 +497,7 @@ console.log(categories,"categorieeeeeeeees");
          {/* Plotly Charts */}
 
          {/* Category Buttons */}
-         
+
           <div className="category-buttons mb-3">
             {categories.map((cat, index) => (
               <button
