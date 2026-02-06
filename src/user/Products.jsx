@@ -563,7 +563,7 @@ export default function Products() {
     <div className="container-fluid mt-5">
       <div className="row">
         {/* Sidebar */}
-        <div className="col-md-3">
+        <div className="col-md-3 mb-3">
           <div className="card h-100 p-3">
             <h4 className="mb-3">Sub Categories</h4>
 
